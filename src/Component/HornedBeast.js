@@ -19,13 +19,23 @@ class HornedBeasts extends React.Component{
         })
     }
 
+    sendDataToModal = () => {
+        this.props.modalHandler(this.props.title, this.props.imageUrl, this.props.description, true);
+    }
 
     render(){
         return(
             <>
                 <Col>
-                    <Card style={{ width: '18rem' }} className='card'>
-                        <Card.Img onClick={this.votesHandler} variant="top" src={this.props.imageUrl} className='best-img'/>
+                    <Card 
+                        style={{ width: '18rem' }}
+                        onClick={this.votesHandler}
+                        >
+                        <Card.Img 
+                            onClick={this.sendDataToModal}
+                            variant="top" 
+                            src={this.props.imageUrl} 
+                        />
                         <Card.Body>
                             <Card.Title>{this.props.title}</Card.Title>
                             <Card.Text>
