@@ -28,10 +28,11 @@ class HornedBeasts extends React.Component{
             <>
                 <Col>
                     <Card 
-                        style={{ width: '18rem' }}
+                        style={{ width: '18rem', height: '32rem' , marginBottom: '1.5rem'}}
                         onClick={this.votesHandler}
                         >
                         <Card.Img 
+                            style={{width: '100%', height: '50%'}}
                             onClick={this.sendDataToModal}
                             variant="top" 
                             src={this.props.imageUrl} 

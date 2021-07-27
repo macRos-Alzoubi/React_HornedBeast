@@ -10,9 +10,9 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      title: 'title',
-      imageUrl: 'url',
-      description: 'des',
+      title: '',
+      imageUrl: '',
+      description: '',
       modalState: false,
     };
   }
