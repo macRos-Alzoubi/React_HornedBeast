@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
 class HornedBeasts extends React.Component{
@@ -28,7 +27,7 @@ class HornedBeasts extends React.Component{
             <>
                 <Col>
                     <Card 
-                        style={{ width: '18rem', height: '32rem' , marginBottom: '1.5rem'}}
+                        style={{ width: '18rem', height: '23rem' , marginBottom: '1.5rem'}}
                         onClick={this.votesHandler}
                         >
                         <Card.Img 
@@ -39,11 +38,10 @@ class HornedBeasts extends React.Component{
                         />
                         <Card.Body>
                             <Card.Title>{this.props.title}</Card.Title>
-                            <Card.Text>
-                            ❤ {this.state.numberOfVotes}
-                            </Card.Text>
-                            <Card.Footer>{this.props.description}</Card.Footer>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Card.Footer>
+                                <Card.Text>❤ {this.state.numberOfVotes}</Card.Text>
+                                <Card.Text>{this.props.description}</Card.Text>
+                            </Card.Footer>
                         </Card.Body>
                     </Card>      
                 </Col>        
